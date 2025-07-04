@@ -1,0 +1,4 @@
+src/.git
+src/node_modules
+src/vendor
+src/docker
