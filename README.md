@@ -3,6 +3,25 @@
 ## Wymagania
 - **Docker** oraz **Docker Compose** muszą być zainstalowane na Twoim systemie.
 
+## Struktura folderów
+
+Poniżej znajduje się ogólny opis struktury folderów projektu, co ułatwia nawigację i zrozumienie organizacji aplikacji:
+
+├── src/
+│ ├── 
+├── .dockerignore
+├── .docker-compose.yml
+├── Dockerfile
+├── nginx.conf
+
+### Wyjaśnienia:
+
+- **src/** – Folder zawierający główną aplikację źródłową - pobraną z repozytorium.
+- **.dockerignore** – Plik, który określa pliki i foldery, które powinny być ignorowane przez Docker przy tworzeniu obrazu. Używane do wykluczenia zbędnych plików, takich jak pliki tymczasowe, lokalne pliki konfiguracji, itp.
+- **.docker-compose.yml** – Plik konfiguracyjny używany przez Docker Compose do uruchomienia wielu kontenerów w jednym środowisku. Określa usługi kontenerów, ich zależności, sieci, woluminy, itp.
+- **Dockerfile** – Plik używany przez Docker do tworzenia obrazu kontenera aplikacji. Zawiera wszystkie instrukcje do zbudowania środowiska uruchomieniowego aplikacji.
+- **nginx.conf** – Plik konfiguracyjny serwera Nginx, który zarządza ruchem HTTP, ustawia przekierowania, konfigurację proxy i inne opcje dla aplikacji.
+
 ## Uruchomienie aplikacji
 
 1. **Uruchom Docker Compose**:
