@@ -1,0 +1,2 @@
+* * * * * cd /var/www && echo "Current directory: $(pwd)" >> /tmp/cron_test.log
+* * * * * cd /var/www && /usr/local/bin/php artisan schedule:run >> /tmp/cron_test.log
