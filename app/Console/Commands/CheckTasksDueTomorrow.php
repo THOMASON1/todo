@@ -39,6 +39,6 @@ class CheckTasksDueTomorrow extends Command
             Mail::to($task->user->email)->send(new TaskDueTomorrowMail($task));
         }
 
-        $this->info('Przeterminowane zadania zostały sprawdzone i powiadomienia wysłane.');
+        $this->info('Nadchodzące zadania zostały sprawdzone i powiadomienia mailowe wysłane.');
     }
 }
