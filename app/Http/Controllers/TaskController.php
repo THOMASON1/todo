@@ -76,8 +76,7 @@ class TaskController extends Controller
             'due_date' => 'required|date',
         ]);
 
-        $task = Task::where('id', $id);
-        $task->update($validated);
+        $task = Task::find($id)->update($validated);
 
         return redirect()->route('tasks')->with('success', 'Zadanie zostało edytowane!');
     }
