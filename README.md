@@ -2,6 +2,7 @@
 
 ## Wymagania
 - **Docker** oraz **Docker Compose** muszą być zainstalowane na Twoim systemie.
+- Pliki konfiguracyjne Dockera są w folderze: `/docker`.
 
 ## Struktura folderów
 
