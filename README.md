@@ -7,12 +7,14 @@
 
 Poniżej znajduje się ogólny opis struktury folderów projektu, co ułatwia nawigację i zrozumienie organizacji aplikacji:
 
+```dotenv
 ├── src/
 │ ├── 
 ├── .dockerignore
 ├── .docker-compose.yml
 ├── Dockerfile
 ├── nginx.conf
+```
 
 ### Wyjaśnienia:
 
