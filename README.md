@@ -1,11 +1,11 @@
 # Instalacja i uruchomienie aplikacji
 
 ## Wymagania
-- **Docker** oraz **Docker Compose** muszą być zainstalowane na Twoim systemie. Jeśli nie masz ich zainstalowanych, odwiedź [stronę Docker](https://www.docker.com/get-started) i postępuj zgodnie z instrukcjami.
+- **Docker** oraz **Docker Compose** muszą być zainstalowane na Twoim systemie.
 
 ## Uruchomienie aplikacji
 
-1. **Uruchom Docker Compose** w tle:
+1. **Uruchom Docker Compose**:
     ```bash
     docker-compose up --build -d
     ```
@@ -47,7 +47,7 @@
     ```
 
 4. **Migracja bazy danych**:
-    Jeśli aplikacja używa bazy danych, uruchom migracje:
+    Uruchom migracje:
     ```bash
     docker-compose exec app php artisan migrate
     ```
@@ -56,7 +56,28 @@
 
 ### Google Calendar API
 
-Aby umożliwić system tworzenia adnotacji w **Google Calendar**, musisz skonfigurować klucz API:
+Aby umożliwić tworzenia adnotacji w **Google Calendar**, musisz skonfigurować klucz API:
 
 1. Zaloguj się do swojego konta **Google Cloud Console** i wygeneruj **credentials.json**.
-2. Wstaw plik `credentials.json` do folderu:
+2. Wstaw plik `credentials.json` do folderu: `/storage/app/google-calendar`.
+3. Skonfiguruj identyfikator kalendarza w pliku `.env`:
+```dotenv
+GOOGLE_CALENDAR_ID=<Twój_ID_Kalendarza>
+```
+
+### Wysyłka mailowa
+
+Aplikacja zawiera cron do automatycznego wysyłania maili w określonych odstępach czasu. Używa on systemu cron na podstawie crontab, aby wykonywać zadania związane z wysyłką maili (np. powiadomienia, przypomnienia).
+
+Potrzebna jest poprawna konfiguracja danych w pliku `.env`:
+
+```dotenv
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=twoj_email@gmail.com
+MAIL_PASSWORD=twoje_haslo
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=twoj_email@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
