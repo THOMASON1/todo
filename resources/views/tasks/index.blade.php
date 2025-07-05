@@ -208,6 +208,11 @@
                                     <button class="btn btn-sm btn-primary editTaskBtn" data-id="${row.id}" data-name="${row.name}" data-description="${row.description}" data-priority="${row.priority}" data-status="${row.status}" data-duedate="${row.due_date}">
                                             <i class="fa fa-edit"></i> Edytuj
                                     </button>
+                                    <form action="/task-history/${row.id}" method="GET">
+                                        <button type="submit" class="btn btn-sm btn-info">
+                                            <i class="fa fa-history"></i> Historia
+                                        </button>
+                                    </form>
                                     <form action="/tasks/${data}" method="POST" class="delete-form">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="_method" value="DELETE">
