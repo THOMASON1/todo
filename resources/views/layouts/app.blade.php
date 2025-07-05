@@ -84,6 +84,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="text-center text-muted py-3 mt-5 border-top">
+            &copy; {{ date('Y') }} Tomasz Jasnos
+        </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
