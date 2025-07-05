@@ -74,6 +74,12 @@ Poniżej znajduje się ogólny opis struktury folderów projektu, co ułatwia na
     docker-compose exec app php artisan migrate
     ```
 
+5. **Adres aplikacji**:
+    Aplikacja będzie działać pod adresem (domyślnie na porcie 8030):
+    ```dotenv
+    http://localhost:8030
+    ```
+
 ## Dodatkowe konfiguracje
 
 ### Google Calendar API
