@@ -1,4 +1,10 @@
-1. Obraz i konfiguracja Docker'a z osobnymi kontenerami na aplikacje, bazę danych, composer, i phpmyadmin do zarządzania bazą danych przez GUI.
-2. System rejestracji, logowania, autoryzacji używając laravel/ui.
-3. Tabela z moimi zadaniami używając biblioteki DataTables z możliwością filtrowania po odpowiednich polach.
-4. Dodawanie zadań poprzez okno modularne.
+1. Obraz i konfiguracja Docker.
+2. System logowania (laravel/ui, auth).
+3. Tabela zadań z wykorzystaniem DataTables (paginacja, sortowanie, filtrowanie, ładowanie danych dynamicznie (Ajax))
+4. Dodawanie i edytowanie zadań z oknami modalnymi.
+5. Usuwanie zadań.
+6. System powiadomień użytkownika oparty na toastr.js.
+7. Generowanie linków/tokenów publicznych do podglądu moich zadań.
+8. Historia zmian zadań.
+9. Integracja z Google Calendar.
+10. System powiadomień mailowych (raz dziennie, użycie mechanizmu crontab'a) o zbliżających się terminach zadań.
