@@ -13,17 +13,7 @@ class TaskObserver
      */
     public function created(Task $task): void
     {
-        TaskHistory::create([
-            'task_id' => $task->id,
-            'name' => $task->name,
-            'description' => $task->description,
-            'status' => $task->status,
-            'priority' => $task->priority,
-            'due_date' => $task->due_date,
-            'action' => 'CREATE',
-            'changed_at' => now(),
-            'changed_by' => Auth::id(),
-        ]);
+        //
     }
 
     /**
@@ -50,18 +40,7 @@ class TaskObserver
      */
     public function deleted(Task $task): void
     {
-        \Log::info('Zadanie skasowane.');
-        TaskHistory::create([
-            'task_id' => $task->id,
-            'name' => $task->name,
-            'description' => $task->description,
-            'status' => $task->status,
-            'priority' => $task->priority,
-            'due_date' => $task->due_date,
-            'action' => 'DELETE',
-            'changed_at' => now(),
-            'changed_by' => Auth::id(),
-        ]);
+        //
     }
 
     /**
